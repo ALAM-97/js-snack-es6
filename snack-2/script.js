@@ -39,12 +39,16 @@ const superLeague =
 ];
 
 // 4.
-const {team, fouls} = superLeague;
-
+let info;
 const teamsAndFouls = [];
 
 for (let i = 0; i < superLeague.length; i++) {
-    teamsAndFouls.push(superLeague[i].team);
-    teamsAndFouls.push(superLeague[i].fouls);
-}
+    info = superLeague[i];
+    const { team, fouls } = info;
+    teamsAndFouls.push({
+        team,
+        fouls
+    });
+};
+
 console.log(teamsAndFouls);
