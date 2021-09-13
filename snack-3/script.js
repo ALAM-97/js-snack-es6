@@ -4,12 +4,10 @@
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const numbersBetween = numbers.filter(
-    (number) => {
-        if (number > 2 && number < 7) {
-            return true;
-        }
-        return false;
-    });
+const numbersBetween = (arr, a, b) => 
+    numbers.filter(
+        (number) => number > a && number < b
+        
+    );
 
-console.log(numbersBetween);
+console.log(numbersBetween(numbers, 2, 7));
